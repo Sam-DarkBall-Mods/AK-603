@@ -2,26 +2,27 @@
 
 [![CI](https://github.com/Sam-DarkBall-Mods/AK-603/actions/workflows/ci.yml/badge.svg)](https://github.com/Sam-DarkBall-Mods/AK-603/actions/workflows/ci.yml)
 
-AK-603 weapon and vehicle systems for Arma 3.
+This mod adds BLUFOR and OPFOR versions of the AK-603 naval gun system. It uses
+a twin AO-18KD weapon with a 2,000 round magazine. The operator display shows
+the date and time, turret angles, range and remaining ammunition.
 
 ## Requirements
 
 - Arma 3 2.22 or newer
-- Additional runtime dependencies declared by `CfgPatches`
+- CBA_A3
 
-## Development
+## Building
 
 ```bash
+python3 -B -m unittest discover -s tests -p "test_*.py" -v
 hemtt check
 hemtt build --no-bin
-python3 -B -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-Legacy `CfgPatches`, function names, virtual PBO prefixes, and release PBO
-filenames are compatibility contracts and must not change in a patch release.
+The game classes and the `ak603` PBO prefix are kept for compatibility with
+existing missions.
 
 ## License
 
-SQF, Arma configuration, and tooling are GPL-2.0-or-later. Original Arma
-models, textures, materials, animations, and audio are APL-SA. See
-[LICENSES.md](LICENSES.md) and closer notices.
+Code and configs use GPL-2.0-or-later. The model, textures, materials and audio
+use APL-SA. See [LICENSES.md](LICENSES.md).
