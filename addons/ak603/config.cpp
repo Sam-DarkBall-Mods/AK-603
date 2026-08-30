@@ -7,7 +7,7 @@ class CfgPatches
 		{
 			"A3_Static_F_Jets"
 		};
-		requiredVersion=0.1;
+		requiredVersion = 2.22;
 		units[]=
 		{
 			"ak603_O",
